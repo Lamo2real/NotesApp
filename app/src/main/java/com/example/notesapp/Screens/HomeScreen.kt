@@ -25,7 +25,7 @@ fun HomeScreen(navController: NavController) {
         ) {
             Text(text = "home")
             Button(onClick = {
-                navController.navigate("detail")
+                navController.navigate(Screen.Detail.route)
             }) {
                 Text(text = "Go To DetailScreen")
             }

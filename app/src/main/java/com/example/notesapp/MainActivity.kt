@@ -16,6 +16,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.notesapp.Screens.DetailScreen
 import com.example.notesapp.Screens.HomeScreen
+import com.example.notesapp.Screens.Screen
 import com.example.notesapp.ui.theme.NotesAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -30,11 +31,11 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    NavHost(navController = navController, startDestination = "home") {
-                        composable(route = "home") {
+                    NavHost(navController = navController, startDestination = Screen.Home.route) {
+                        composable(route = Screen.Home.route) {
                             HomeScreen(navController = navController)
                         }
-                        composable(route = "detail") {
+                        composable(route = Screen.Detail.route) {
                             DetailScreen(navController = navController)
                         }
                     }
