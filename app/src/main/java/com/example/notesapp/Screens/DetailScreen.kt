@@ -11,11 +11,11 @@ import androidx.compose.ui.modifier.modifierLocalMapOf
 import androidx.navigation.NavController
 
 @Composable
-fun DetailScreen(navController: NavController) {
+fun DetailScreen(name: String, navController: NavController) {
     Column (
         modifier = Modifier.background(Color.LightGray)
     ) {
-        Text(text = "detail")
+        Text(text = "detail: $name")
         Button(onClick = {
             navController.navigateUp()
         }) 
